@@ -73,6 +73,11 @@ namespace CodingTest
             }
         }
 
+        /// <summary>
+        /// This method calculates Product pAmount
+        /// </summary>
+        /// <param name="item">The Product item</param>
+        /// <param name="categoryId">The Category id</param>
         private void ProductAmountCalculator(ProductItem item, int categoryId)
         {
             Product product = new Product();           
@@ -87,6 +92,11 @@ namespace CodingTest
             product.CommissionPayment(totalAmount);
         }
 
+        /// <summary>
+        /// This method calculates Membership pAmount
+        /// </summary>
+        /// <param name="item">The Product item</param>
+        /// <param name="categoryId">The Category id</param>
         private void MembershipAmountCalculator(ProductItem item,int categoryId)
         {
             Membership membership = new Membership();
