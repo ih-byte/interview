@@ -36,7 +36,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(284, 146);
+            this.button1.Location = new System.Drawing.Point(299, 145);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 36);
             this.button1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // 
             this.cmBxCategory.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmBxCategory.FormattingEnabled = true;
-            this.cmBxCategory.Location = new System.Drawing.Point(284, 97);
+            this.cmBxCategory.Location = new System.Drawing.Point(299, 97);
             this.cmBxCategory.Name = "cmBxCategory";
             this.cmBxCategory.Size = new System.Drawing.Size(250, 26);
             this.cmBxCategory.TabIndex = 1;
@@ -72,6 +72,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Main";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
