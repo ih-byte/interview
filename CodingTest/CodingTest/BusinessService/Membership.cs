@@ -12,22 +12,26 @@ namespace CodingTest.BusinessService
     {
         public void ActivateMembership()
         {
+            //the entire logic need to be added as per bussiness logic at later period
             MessageBox.Show("New membership created");
         }
 
         public double CalculateAmount(ProductItem product)
         {
             MessageBox.Show("Calculate Total Amount");
-            return 0;
+            //the entire logic need to be added as per bussiness logic at later period
+            return product.ProductQuantity*product.ProductUnitPrice;
         }
 
         public void SendMail()
         {
+            //the entire logic need to be added as per bussiness logic at later period
             MessageBox.Show("Email send to owner");
         }
 
         public void UpgradeMembership()
         {
+            //the entire logic need to be added as per bussiness logic at later period
             MessageBox.Show("Upgraded membership");
         }
     }

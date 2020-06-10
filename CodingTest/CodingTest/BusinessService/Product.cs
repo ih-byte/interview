@@ -7,12 +7,14 @@ namespace CodingTest.BusinessService
     {
         public double CalculateAmount(ProductItem product)
         {
+            //the entire logic need to be added as per bussiness logic at later period
             MessageBox.Show("Calculate Total Amount");
-            return 0;
+            return product.ProductQuantity * product.ProductUnitPrice;
         }
 
         public void GenerateSlip()
         {
+            //the entire logic need to be added as per bussiness logic at later period
             MessageBox.Show("Slip generated");
         }
     }
