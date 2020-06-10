@@ -31,12 +31,12 @@ namespace CodingTest
         {
             List<PaymentCategory> paymentCategories = new List<PaymentCategory>
             {
-                new PaymentCategory { Id = 0, Name = "---Select---" },
-                new PaymentCategory { Id = 1, Name = "Physical Product" },
-                new PaymentCategory { Id = 2, Name = "Book" },
-                new PaymentCategory { Id = 3, Name = "New Membership" },
-                new PaymentCategory { Id = 4, Name = "Upgrade Membership" },
-                new PaymentCategory { Id = 5, Name = "Learning to Ski Video" }
+                new PaymentCategory { Id = 0, Name = "---Select---", Type="" },
+                new PaymentCategory { Id = 1, Name = "Physical Product", Type="Product" },
+                new PaymentCategory { Id = 2, Name = "Book", Type="Product" },
+                new PaymentCategory { Id = 3, Name = "New Membership", Type="Membership" },
+                new PaymentCategory { Id = 4, Name = "Upgrade Membership", Type="Membership" },
+                new PaymentCategory { Id = 5, Name = "Learning to Ski Video", Type="Product" }
             };
             return paymentCategories;
         }
