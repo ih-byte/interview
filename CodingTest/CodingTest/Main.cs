@@ -40,5 +40,18 @@ namespace CodingTest
             };
             return paymentCategories;
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            dynamic category = cmBxCategory.SelectedItem;
+            if(category.Id==0)
+            {
+                MessageBox.Show("Please select one option");
+            }
+            else
+            {
+
+            }
+        }
     }
 }
