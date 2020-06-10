@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessService\ICommissionPayment.cs" />
     <Compile Include="BusinessService\IMembership.cs" />
     <Compile Include="BusinessService\IPacking.cs" />
     <Compile Include="BusinessService\IPayment.cs" />
