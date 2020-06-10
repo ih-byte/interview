@@ -66,6 +66,10 @@ namespace CodingTest
                 {
                     ProductAmountCalculator(item);
                 }
+                else if (categoryType.Equals("Membership"))
+                {
+                    MembershipAmountCalculator(item, category.Id);
+                }
             }
         }
 
@@ -75,6 +79,24 @@ namespace CodingTest
             var totalAmount= product.CalculateAmount(item);
             product.GenerateSlip();
             lblTotalAmountVal.Text = String.Format("{0:0.00}", totalAmount); 
+        }
+
+        private void MembershipAmountCalculator(ProductItem item,int categoryId)
+        {
+            Membership membership = new Membership();
+            if(categoryId == 3)
+            {
+                item.ProductUnitPrice = 1000.00;//for tesing purpose
+                membership.ActivateMembership();
+            }
+            else if (categoryId == 4)
+            {
+                item.ProductUnitPrice = 500.00;//for tesing purpose
+                membership.UpgradeMembership();
+            }
+
+            var totalAmount = membership.CalculateAmount(item);           
+            lblTotalAmountVal.Text = String.Format("{0:0.00}", totalAmount);
         }
     }
 }
