@@ -14,6 +14,8 @@ namespace CodingTest
 {
     public partial class Main : Form
     {
+        
+
         public Main()
         {
             InitializeComponent();
@@ -43,15 +45,26 @@ namespace CodingTest
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            //These models objects will be intialized from earlier stage of the application
+            ProductItem item = new ProductItem
+            {
+                ProductId = 1,
+                ProductQuantity = 1,
+                ProductUnitPrice = 100.00
+            };
+
             dynamic category = cmBxCategory.SelectedItem;
-            if(category.Id==0)
+            string categoryType = category.Type;
+            if (category.Id==0)
             {
                 MessageBox.Show("Please select one option");
             }
             else
             {
-
+                
             }
         }
+
+        
     }
 }
