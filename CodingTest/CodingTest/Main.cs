@@ -86,6 +86,12 @@ namespace CodingTest
             {
                 product.GenerateSlip(); //duplicate slip for royal department
             }
+            else if (categoryId == 5)
+            {
+                item.ProductUnitPrice = 200.00;//for tesing purpose
+                //logic need to added for adding a free video
+                MessageBox.Show("Added a free video");
+            }
             var totalAmount = product.CalculateAmount(item);
             lblTotalAmountVal.Text = String.Format("{0:0.00}", totalAmount);
 
