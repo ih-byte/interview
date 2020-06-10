@@ -64,6 +64,9 @@
     <Compile Include="BusinessService\IMembership.cs" />
     <Compile Include="BusinessService\IPacking.cs" />
     <Compile Include="BusinessService\IPayment.cs" />
+    <Compile Include="BusinessService\Membership.cs" />
+    <Compile Include="BusinessService\Packing.cs" />
+    <Compile Include="BusinessService\Payment.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
