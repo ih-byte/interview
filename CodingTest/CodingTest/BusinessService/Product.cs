@@ -16,7 +16,7 @@ namespace CodingTest.BusinessService
         {
             //the entire logic need to be added as per bussiness logic at later period
             MessageBox.Show("Commission Amount Calculated for Agent");
-            return totalAmount * 0.2; //for testing considered 2% commission on total amount
+            return totalAmount * 0.02; //for testing considered 2% commission on total amount
         }
 
         public void GenerateSlip()
