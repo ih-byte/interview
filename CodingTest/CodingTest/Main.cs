@@ -64,7 +64,7 @@ namespace CodingTest
             {
                 if (categoryType.Equals("Product"))
                 {
-                    ProductAmountCalculator(item);
+                    ProductAmountCalculator(item, category.Id);
                 }
                 else if (categoryType.Equals("Membership"))
                 {
@@ -73,11 +73,15 @@ namespace CodingTest
             }
         }
 
-        private void ProductAmountCalculator(ProductItem item)
+        private void ProductAmountCalculator(ProductItem item, int categoryId)
         {
-            Product product = new Product();
-            var totalAmount= product.CalculateAmount(item);
+            Product product = new Product();           
             product.GenerateSlip();
+            if(categoryId==2)
+            {
+                product.GenerateSlip(); //duplicate slip for royal department
+            }
+            var totalAmount = product.CalculateAmount(item);
             lblTotalAmountVal.Text = String.Format("{0:0.00}", totalAmount); 
         }
 
@@ -97,6 +101,8 @@ namespace CodingTest
 
             var totalAmount = membership.CalculateAmount(item);           
             lblTotalAmountVal.Text = String.Format("{0:0.00}", totalAmount);
+
+            membership.SendMail();
         }
     }
 }
