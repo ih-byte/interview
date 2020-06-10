@@ -82,7 +82,9 @@ namespace CodingTest
                 product.GenerateSlip(); //duplicate slip for royal department
             }
             var totalAmount = product.CalculateAmount(item);
-            lblTotalAmountVal.Text = String.Format("{0:0.00}", totalAmount); 
+            lblTotalAmountVal.Text = String.Format("{0:0.00}", totalAmount);
+
+            product.CommissionPayment(totalAmount);
         }
 
         private void MembershipAmountCalculator(ProductItem item,int categoryId)
