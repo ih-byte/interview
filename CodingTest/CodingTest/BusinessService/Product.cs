@@ -8,7 +8,7 @@ namespace CodingTest.BusinessService
         public double CalculateAmount(ProductItem product)
         {
             //the entire logic need to be added as per bussiness logic at later period
-            MessageBox.Show("Calculate Total Amount");
+            MessageBox.Show("Total Amount Calculated");
             return product.ProductQuantity * product.ProductUnitPrice;
         }
 

@@ -62,9 +62,19 @@ namespace CodingTest
             }
             else
             {
-                
+                if (categoryType.Equals("Product"))
+                {
+                    ProductAmountCalculator(item);
+                }
             }
         }
 
+        private void ProductAmountCalculator(ProductItem item)
+        {
+            Product product = new Product();
+            var totalAmount= product.CalculateAmount(item);
+            product.GenerateSlip();
+            lblTotalAmountVal.Text = String.Format("{0:0.00}", totalAmount); 
+        }
     }
 }
