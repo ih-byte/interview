@@ -26,7 +26,8 @@ namespace CodingTest
             var paymentCategories = GetAllCategories();
             cmBxCategory.ValueMember = "Id";
             cmBxCategory.DisplayMember = "Name";
-            cmBxCategory.DataSource = paymentCategories;            
+            cmBxCategory.DataSource = paymentCategories;
+            lblTotalAmountVal.Text= "0.00";
         }
 
         private List<PaymentCategory> GetAllCategories()
@@ -65,6 +66,5 @@ namespace CodingTest
             }
         }
 
-        
     }
 }

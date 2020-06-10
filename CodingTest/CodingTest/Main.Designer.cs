@@ -31,6 +31,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cmBxCategory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblTotalAmount = new System.Windows.Forms.Label();
+            this.lblTotalAmountVal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -63,11 +65,33 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Payment for :";
             // 
+            // lblTotalAmount
+            // 
+            this.lblTotalAmount.AutoSize = true;
+            this.lblTotalAmount.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAmount.Location = new System.Drawing.Point(179, 222);
+            this.lblTotalAmount.Name = "lblTotalAmount";
+            this.lblTotalAmount.Size = new System.Drawing.Size(107, 18);
+            this.lblTotalAmount.TabIndex = 3;
+            this.lblTotalAmount.Text = "Total Amount :";
+            // 
+            // lblTotalAmountVal
+            // 
+            this.lblTotalAmountVal.AutoSize = true;
+            this.lblTotalAmountVal.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAmountVal.Location = new System.Drawing.Point(296, 222);
+            this.lblTotalAmountVal.Name = "lblTotalAmountVal";
+            this.lblTotalAmountVal.Size = new System.Drawing.Size(18, 18);
+            this.lblTotalAmountVal.TabIndex = 4;
+            this.lblTotalAmountVal.Text = "0";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTotalAmountVal);
+            this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmBxCategory);
             this.Controls.Add(this.button1);
@@ -84,6 +108,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmBxCategory;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotalAmount;
+        private System.Windows.Forms.Label lblTotalAmountVal;
     }
 }
 
