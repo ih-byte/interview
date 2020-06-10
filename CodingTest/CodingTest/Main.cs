@@ -45,6 +45,13 @@ namespace CodingTest
         }
 
         private void Button1_Click(object sender, EventArgs e)
+        {   
+            dynamic category = cmBxCategory.SelectedItem;
+            string categoryType = category.Type;
+            AmountCalculator(categoryType, category.Id);
+        }
+
+        public void AmountCalculator(string categoryType, int categoryId)
         {
             //These models objects will be intialized from earlier stage of the application
             ProductItem item = new ProductItem
@@ -54,9 +61,7 @@ namespace CodingTest
                 ProductUnitPrice = 100.00
             };
 
-            dynamic category = cmBxCategory.SelectedItem;
-            string categoryType = category.Type;
-            if (category.Id==0)
+            if (categoryId == 0)
             {
                 MessageBox.Show("Please select one option");
             }
@@ -64,11 +69,11 @@ namespace CodingTest
             {
                 if (categoryType.Equals("Product"))
                 {
-                    ProductAmountCalculator(item, category.Id);
+                    ProductAmountCalculator(item, categoryId);
                 }
                 else if (categoryType.Equals("Membership"))
                 {
-                    MembershipAmountCalculator(item, category.Id);
+                    MembershipAmountCalculator(item, categoryId);
                 }
             }
         }
@@ -78,7 +83,7 @@ namespace CodingTest
         /// </summary>
         /// <param name="item">The Product item</param>
         /// <param name="categoryId">The Category id</param>
-        private void ProductAmountCalculator(ProductItem item, int categoryId)
+        public void ProductAmountCalculator(ProductItem item, int categoryId)
         {
             Product product = new Product();           
             product.GenerateSlip();
