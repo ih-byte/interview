@@ -6,7 +6,7 @@ namespace CodingTest.BusinessService
 {
     public class Payment : IPayment
     {
-        public double CalculateAmount(Product product)
+        public double CalculateAmount(ProductItem product)
         {
             MessageBox.Show("Calculate Total Amount");
             return 0;

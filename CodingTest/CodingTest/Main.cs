@@ -1,4 +1,5 @@
-﻿using CodingTest.Model;
+﻿using CodingTest.BusinessService;
+using CodingTest.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace CodingTest
             var paymentCategories = GetAllCategories();
             cmBxCategory.ValueMember = "Id";
             cmBxCategory.DisplayMember = "Name";
-            cmBxCategory.DataSource = paymentCategories;
+            cmBxCategory.DataSource = paymentCategories;            
         }
 
         private List<PaymentCategory> GetAllCategories()

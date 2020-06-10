@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CodingTest.Model
 {
-    public class Product
+    public class ProductItem
     {
         public int ProductId { get; set; }
         public double ProductUnitPrice { get; set; }
